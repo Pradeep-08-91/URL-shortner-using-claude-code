@@ -5,11 +5,10 @@ A starter kit for practicing an end-to-end plan → build → review → test �
 ## What's in here
 ```
 plan.md                        # the project plan (planner agent reads/updates this)
-.claude/agents/planner.md      # read-only planning agent
-.claude/agents/code-reviewer.md# read-only review agent (git diff access only)
-.claude/agents/test-runner.md  # runs pytest/ruff, fixes failures
 .github/workflows/ci.yml       # CI: lint + test on PRs, Docker build on main
 ```
+
+Agent definitions live at the repo root, not here: `../.claude/agents/planner.md` (read-only planning), `../.claude/agents/code-reviewer.md` (read-only review, git diff access only), `../.claude/agents/test-runner.md` (runs pytest/ruff, fixes failures, cd's into `url-shortener-starter/` first).
 
 ## Setup
 1. Create a new GitHub repo (e.g. `shrtn`), clone it, and copy these files in **preserving the folder structure** (`.claude/` and `.github/` are hidden folders).
